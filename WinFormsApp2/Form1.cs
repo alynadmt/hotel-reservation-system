@@ -22,5 +22,17 @@ namespace WinFormsApp2
         {
             txt_sifre.PasswordChar = '*';
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_giris_Click(object sender, EventArgs e)
+        {
+            rezervasyon form2 = new rezervasyon();
+            form2.Show();  // form2 göster diyoruz
+            this.Hide();   // bu yani form1 gizle diyoruz
+        }
     }
 }
