@@ -35,7 +35,7 @@ namespace WinFormsApp2
                 ekle.SubItems.Add(oku["Müs_DTarihi"].ToString());
                 ekle.SubItems.Add(oku["Müs_Mail"].ToString());
 
-                listView1.Items.Add(ekle);
+                //listView1.Items.Add(ekle);
             }
             baglan.Close();
         }
