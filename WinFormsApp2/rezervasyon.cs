@@ -98,25 +98,24 @@ namespace WinFormsApp2
             {
                 MessageBox.Show("boş alan bırakmayınız müs");
             }
-            try { 
-                baglan.Close();
-                SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarihi,@ctarihi", baglan);
+           
+                SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih,500",baglan);
                 cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text);
-                cmd2.Parameters.AddWithValue("@odano", Convert.ToInt32(odanotextBox.Text));
+                cmd2.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
                 cmd2.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
                 cmd2.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
+            cmd2.ExecuteNonQuery();
 
-                MessageBox.Show("başarılı2");
-                //  cmd2.ExecuteNonQuery();
-            }
-            catch(Exception ex) 
+
+            MessageBox.Show("başarılı2");
+                          /* catch(Exception ex) 
             {
                 MessageBox.Show(ex.ToString());
 
             }
 
             //   MessageBox.Show("Başarılı");
-            baglan.Close();
+            baglan.Close();*/
           
 
         }
