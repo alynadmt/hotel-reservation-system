@@ -40,3 +40,6 @@ C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\bin\Debug
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.rezervasyon.resources
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.csproj.CopyComplete
+C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.anaekran.resources
+C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.Properties.Resources.resources
+C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.Fiyat.resources

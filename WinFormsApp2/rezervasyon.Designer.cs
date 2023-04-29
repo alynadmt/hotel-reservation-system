@@ -41,12 +41,16 @@
             this.label7 = new System.Windows.Forms.Label();
             this.rezetbutton = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.odanotextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.komisyontextBox = new System.Windows.Forms.TextBox();
+            this.ücret = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -147,7 +151,7 @@
             // rezetbutton
             // 
             this.rezetbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.rezetbutton.Location = new System.Drawing.Point(692, 317);
+            this.rezetbutton.Location = new System.Drawing.Point(482, 398);
             this.rezetbutton.Name = "rezetbutton";
             this.rezetbutton.Size = new System.Drawing.Size(174, 63);
             this.rezetbutton.TabIndex = 12;
@@ -164,14 +168,14 @@
             this.dateTimePicker1.TabIndex = 15;
             this.dateTimePicker1.Value = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
             // 
-            // dateTimePicker2
+            // dateTimePicker3
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(675, 107);
-            this.dateTimePicker2.MaxDate = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(300, 31);
-            this.dateTimePicker2.TabIndex = 17;
-            this.dateTimePicker2.Value = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker3.Location = new System.Drawing.Point(675, 107);
+            this.dateTimePicker3.MaxDate = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(300, 31);
+            this.dateTimePicker3.TabIndex = 17;
+            this.dateTimePicker3.Value = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
             // 
             // label8
             // 
@@ -183,14 +187,14 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Çıkış Tarihi";
             // 
-            // dateTimePicker3
+            // dateTimePicker2
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(675, 49);
-            this.dateTimePicker3.MaxDate = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(300, 31);
-            this.dateTimePicker3.TabIndex = 19;
-            this.dateTimePicker3.Value = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker2.Location = new System.Drawing.Point(675, 49);
+            this.dateTimePicker2.MaxDate = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(300, 31);
+            this.dateTimePicker2.TabIndex = 19;
+            this.dateTimePicker2.Value = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
             // 
             // label9
             // 
@@ -202,22 +206,59 @@
             this.label9.TabIndex = 18;
             this.label9.Text = "Giriş Tarihi";
             // 
-            // textBox1
+            // odanotextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(675, 161);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(150, 31);
-            this.textBox1.TabIndex = 21;
+            this.odanotextBox.Location = new System.Drawing.Point(675, 159);
+            this.odanotextBox.Name = "odanotextBox";
+            this.odanotextBox.Size = new System.Drawing.Size(150, 31);
+            this.odanotextBox.TabIndex = 21;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(513, 161);
+            this.label10.Location = new System.Drawing.Point(513, 163);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(143, 27);
             this.label10.TabIndex = 20;
             this.label10.Text = "Oda Numarası";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(513, 217);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(102, 27);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "Komisyon";
+            // 
+            // komisyontextBox
+            // 
+            this.komisyontextBox.Location = new System.Drawing.Point(675, 219);
+            this.komisyontextBox.Name = "komisyontextBox";
+            this.komisyontextBox.Size = new System.Drawing.Size(150, 31);
+            this.komisyontextBox.TabIndex = 23;
+            this.komisyontextBox.Text = "500 tl";
+            this.komisyontextBox.TextChanged += new System.EventHandler(this.komisyontextBox_TextChanged);
+            // 
+            // ücret
+            // 
+            this.ücret.Location = new System.Drawing.Point(794, 312);
+            this.ücret.Name = "ücret";
+            this.ücret.Size = new System.Drawing.Size(181, 31);
+            this.ücret.TabIndex = 24;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(719, 314);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 27);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "ücret";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // rezervasyon
             // 
@@ -225,11 +266,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ClientSize = new System.Drawing.Size(1052, 586);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.ücret);
+            this.Controls.Add(this.komisyontextBox);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.odanotextBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dateTimePicker3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.rezetbutton);
@@ -291,11 +336,14 @@
         private Label label7;
         private Button rezetbutton;
         private DateTimePicker dateTimePicker1;
-        private DateTimePicker dateTimePicker2;
-        private Label label8;
         private DateTimePicker dateTimePicker3;
+        private Label label8;
+        private DateTimePicker dateTimePicker2;
         private Label label9;
-        private TextBox textBox1;
+        private TextBox odanotextBox;
         private Label label10;
+        private Label label11;
+        private TextBox komisyontextBox;
+        private TextBox ücret;
     }
 }

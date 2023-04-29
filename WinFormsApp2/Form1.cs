@@ -30,7 +30,7 @@ namespace WinFormsApp2
 
         private void btn_giris_Click(object sender, EventArgs e)
         {
-            rezervasyon form2 = new rezervasyon();
+            anaekran form2 = new anaekran();
             form2.Show();  // form2 göster diyoruz
             this.Hide();   // bu yani form1 gizle diyoruz
         }
