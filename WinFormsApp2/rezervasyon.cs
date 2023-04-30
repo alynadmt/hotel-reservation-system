@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Collections;
 
 namespace WinFormsApp2
 {
@@ -66,49 +67,57 @@ namespace WinFormsApp2
             try
             {
                 baglan.Open();
-               // int a1;
+              
                 SqlCommand cmd = new SqlCommand("exec insertprocmüs @ad,@soyad,@telno,@tc,@dtarih,@mail", baglan);
-               // SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarihi,@ctarihi", baglan);
-              /*  SqlCommand cmd3 = new SqlCommand("declare @s1 datetime,@s2 datetime  ,@s3 int\r\nselect @s1=Giriş_Tarihi,@s2=Çıkış_Tarihi from rezervasyon where OdId=@odano");
-                SqlCommand cmd4 = new SqlCommand("declare ,@s4 int select @s4=dbo.fiyatlandır(@s1,@s2,2)");
-                SqlDataReader dr = cmd.ExecuteReader();
-                a1= (int)Convert.ToInt64(dr[0]);
-                ücret.Text = Convert.ToString(a1);*/
+             
                 cmd.Parameters.AddWithValue("@ad", ad2textbox.Text);
                 cmd.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
                 cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
                 cmd.Parameters.AddWithValue("@tc", tc2textbox.Text);
-                cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text)); //DateTime.Now yerine başka bir değer atayabilirsiniz.
+                cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text)); 
                 cmd.Parameters.AddWithValue("@mail", email2textbox.Text);
-             /*   cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text);
-                cmd2.Parameters.AddWithValue("@odano", Convert.ToInt32(odanotextBox.Text));
-                cmd2.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
-                cmd2.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));*/
-               
-                //   cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text)
+           
+
            
                 cmd.ExecuteNonQuery();
-                //  cmd2.ExecuteNonQuery();
-                /* cmd3.ExecuteNonQuery();
-                 cmd4.ExecuteNonQuery();*/
-
-                MessageBox.Show("başarılı1");
+                
             }
             catch
             {
-                MessageBox.Show("boş alan bırakmayınız müs");
+                MessageBox.Show("Müşteri Bilgilerinde Boş Alan Bırakmayınız");
             }
-           
-                SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih,500",baglan);
+            //try
+           // {
+
+                // SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih", baglan);
+
+              
+                    SqlCommand cmd2 = new SqlCommand("exec commission_calculate @tc,@odano,@gtarih,@ctarih", baglan);
+                      cmd2.CommandType = CommandType.StoredProcedure;
+
+            SqlCommand cmd3 = new SqlCommand("exec fullness_update @odano", baglan);
+              //  SqlCommand cmd4 = new SqlCommand(" declare @s3 int \r\nselect @s3=StilID from Odalar where OdaId=@odano\r\nselect Stil from Oda_Stil where StilID=@s3 \r\nselect KSayiID from Oda_Stil where StilID=@s3");
+            //    SqlCommand cmd4 = new SqlCommand("exec commission_calculate @odano",baglan);
+                 
+                //cmd3.Parameters.AddWithValue("@komisyon", Convert.ToInt64(komisyontextBox.Text));
+              //  cmd4.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
+            
                 cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text);
                 cmd2.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
                 cmd2.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
                 cmd2.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
-            cmd2.ExecuteNonQuery();
+                cmd3.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
 
+                cmd2.ExecuteNonQuery();
+                cmd3.ExecuteNonQuery();
+               // cmd4.ExecuteNonQuery();
 
-            MessageBox.Show("başarılı2");
-                          /* catch(Exception ex) 
+                MessageBox.Show("Rezervasyon Başarılı");
+           // }
+           /* catch
+            {
+                MessageBox.Show("Oda Bilgileri Kısmında Boş Alan Bırakmayınız ");
+            }             /* catch(Exception ex) 
             {
                 MessageBox.Show(ex.ToString());
 

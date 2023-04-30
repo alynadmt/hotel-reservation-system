@@ -171,11 +171,11 @@
             // dateTimePicker3
             // 
             this.dateTimePicker3.Location = new System.Drawing.Point(675, 107);
-            this.dateTimePicker3.MaxDate = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker3.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(300, 31);
             this.dateTimePicker3.TabIndex = 17;
-            this.dateTimePicker3.Value = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker3.Value = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             // 
             // label8
             // 
@@ -190,11 +190,11 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(675, 49);
-            this.dateTimePicker2.MaxDate = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker2.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(300, 31);
-            this.dateTimePicker2.TabIndex = 19;
-            this.dateTimePicker2.Value = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
+            this.dateTimePicker2.TabIndex = 17;
+            this.dateTimePicker2.Value = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             // 
             // label9
             // 
