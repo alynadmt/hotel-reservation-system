@@ -89,10 +89,10 @@ namespace WinFormsApp2
             //try
            // {
 
-                // SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih", baglan);
+                // SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih,500", baglan);
 
               
-                    SqlCommand cmd2 = new SqlCommand("exec commission_calculate @tc,@odano,@gtarih,@ctarih", baglan);
+                   SqlCommand cmd2 = new SqlCommand("exec commission_calculate @tc,@odano,@gtarih,@ctarih", baglan);
                       cmd2.CommandType = CommandType.StoredProcedure;
 
             SqlCommand cmd3 = new SqlCommand("exec fullness_update @odano", baglan);
