@@ -4,13 +4,22 @@
     <Compile Update="anaekran.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Entrance.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Fiyat.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="hakkımızdaform.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="rezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="İdare İşlem Ekran.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -10,7 +10,7 @@ namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source =LAPTOP-S74S2GFL; Initial Catalog=YaAl_Hotel_3; Integrated Security=TRUE ");
+        SqlConnection connection = new SqlConnection("Data Source =.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4; Integrated Security=TRUE ");
         public Form1()
         {
             InitializeComponent();
@@ -42,34 +42,96 @@ namespace WinFormsApp2
             string sıfre = txt_sifre.Text;
             
             connection.Open();
-            SqlCommand command = new SqlCommand("Select *from kayıt_ekranı", connection);
+            SqlCommand command = new SqlCommand("Select *from login", connection);
             SqlDataReader reader = command.ExecuteReader();
              
             anaekran form2 = new anaekran();
+            İdare_İşlem_Ekran form3 = new İdare_İşlem_Ekran();
+            Form1 form1 = new Form1();
 
 
 
             while (reader.Read())
             {
-                string a = reader["kullanıcı_adı"].ToString();
-                string b = reader["sifre"].ToString();
+                string a = reader["Kullanıcı_Adı"].ToString().Trim();
+                string b = reader["Sifre"].ToString().Trim();
                 string c = txt_ad.Text;
                 string d = txt_sifre.Text;
-
-                if (c == a && d == b
-)
+             
+                char idare = Convert.ToChar((( reader["Kullanıcı_Adı"].ToString().Trim().Substring(0,1))));
+                char i = 'i';
+                if (c == "" && d == "")
                 {
-                    isThere = true;
+                    MessageBox.Show("Lütfen Kullanıcı adı ve Şifre giriniz");
                     break;
+                }
+               else if (c == a && d == "")
+                {
+                    MessageBox.Show("Lütfen  Şifre giriniz");
+                    break;
+
+                }
+              else  if (d == b && c == "")
+                {
+                    MessageBox.Show("Lütfen  Kullanıcı Adı  giriniz");
+                       break;
                 }
                 else
                 {
-                    isThere = false;
-                }
+                    if ((c == a && c != "") && ((d == b && d != "")) && (idare != i))
+                    {
+                        MessageBox.Show("Basariyla giris yaptiniz", "Program");
 
-            }
+                        connection.Close();
+                        connection.Open();
+                        SqlCommand kom = new SqlCommand("insert Login_Processes values(@Kullanıcı_adı,GETDATE())", connection);
+                        kom.Parameters.AddWithValue("@Kullanıcı_adı", txt_ad.Text);
+                        kom.ExecuteNonQuery();
+
+                        form2.Show();  // form2 göster diyoruz
+                        this.Hide();   // bu yani form1 gizle diyoruz
+                        break;
+
+
+                    }
+                    else if ((c == a && c != "") && ((d == b && d != "")) && (idare == i))
+                    {
+                        MessageBox.Show("Basariyla giris yaptiniz", "Program");
+
+                        form3.Show();  // form2 göster diyoruz
+                        this.Hide();   // bu yani form1 gizle diyoruz
+                        break;
+
+
+                    }
+
+                 else   if ((c != a && c != "") && ((d == b && d != "")))
+                    {
+                        MessageBox.Show("Kullanıcı adı veya şifrenizi kontrol ediniz...1", "Program");
+
+                        break;
+                      
+                    }
+                else    if ((c == a && c != "") && ((d != b && d != "")))
+                    {
+                        MessageBox.Show("Kullanıcı adı veya şifrenizi kontrol ediniz...2", "Program");
+                        break;
+                    }
+                 /*   else if ((c != a && c != "") && ((d != b && d != "")))
+                    {
+                        MessageBox.Show("Kullanıcı adı veya şifrenizi kontrol ediniz...3", "Program");
+                        
+                    }*/
+
+                }
+           
             
-            if(isThere)
+            }
+           connection.Close();
+
+        }
+            
+           /* if(isThere)
             {
                 MessageBox.Show("Basariyla giris yaptiniz", "Program");
                 form2.Show();  // form2 göster diyoruz
@@ -80,7 +142,6 @@ namespace WinFormsApp2
             {
                 MessageBox.Show("Giris yapamadiniz ", "program");
             }
-           
+           */
         }
     }
-}
