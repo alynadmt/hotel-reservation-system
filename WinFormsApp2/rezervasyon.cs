@@ -20,7 +20,7 @@ namespace WinFormsApp2
             InitializeComponent();
             
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_2;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4;Integrated Security=true");
         private void goster()
         {
             baglan.Open();
@@ -63,69 +63,58 @@ namespace WinFormsApp2
         }
 
         private void rezetbutton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                baglan.Open();
-              
-                SqlCommand cmd = new SqlCommand("exec insertprocmüs @ad,@soyad,@telno,@tc,@dtarih,@mail", baglan);
-             
-                cmd.Parameters.AddWithValue("@ad", ad2textbox.Text);
-                cmd.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
-                cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
-                cmd.Parameters.AddWithValue("@tc", tc2textbox.Text);
-                cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text)); 
-                cmd.Parameters.AddWithValue("@mail", email2textbox.Text);
-           
-
-           
-                cmd.ExecuteNonQuery();
-                
-            }
-            catch
-            {
-                MessageBox.Show("Müşteri Bilgilerinde Boş Alan Bırakmayınız");
-            }
-            //try
-           // {
-
-                // SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih,500", baglan);
-
-              
-                   SqlCommand cmd2 = new SqlCommand("exec commission_calculate @tc,@odano,@gtarih,@ctarih", baglan);
-                      cmd2.CommandType = CommandType.StoredProcedure;
-
-            SqlCommand cmd3 = new SqlCommand("exec fullness_update @odano", baglan);
-              //  SqlCommand cmd4 = new SqlCommand(" declare @s3 int \r\nselect @s3=StilID from Odalar where OdaId=@odano\r\nselect Stil from Oda_Stil where StilID=@s3 \r\nselect KSayiID from Oda_Stil where StilID=@s3");
-            //    SqlCommand cmd4 = new SqlCommand("exec commission_calculate @odano",baglan);
-                 
-                //cmd3.Parameters.AddWithValue("@komisyon", Convert.ToInt64(komisyontextBox.Text));
-              //  cmd4.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
             
-                cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text);
-                cmd2.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
-                cmd2.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
-                cmd2.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
-                cmd3.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
-
-                cmd2.ExecuteNonQuery();
-                cmd3.ExecuteNonQuery();
-               // cmd4.ExecuteNonQuery();
-
-                MessageBox.Show("Rezervasyon Başarılı");
-           // }
-           /* catch
+        { baglan.Open();
+             SqlCommand cmd3 = new SqlCommand("select DolulukId from Odalar where OdaId=@odano", baglan);
+            cmd3.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
+            SqlDataReader reader = cmd3.ExecuteReader();
+            while (reader.Read())
             {
-                MessageBox.Show("Oda Bilgileri Kısmında Boş Alan Bırakmayınız ");
-            }             /* catch(Exception ex) 
-            {
-                MessageBox.Show(ex.ToString());
+                string a = reader["DolulukId"].ToString();
+                int a2 = (int)Convert.ToInt64(a);
+                int b = 1;
+                if (a2 == b)
+                {
+                    MessageBox.Show("Oda Bu Tarihler Arası Doludur");
+                    break;
+                }
+                else
+                {
+                    baglan.Close();
+                    baglan.Open();
+                        SqlCommand cmd = new SqlCommand("exec insertprocmüs @ad,@soyad,@telno,@tc,@dtarih,@mail", baglan);
 
+                        cmd.Parameters.AddWithValue("@ad", ad2textbox.Text);
+                        cmd.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
+                        cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
+                        cmd.Parameters.AddWithValue("@tc", tc2textbox.Text);
+                        cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text));
+                        cmd.Parameters.AddWithValue("@mail", email2textbox.Text);
+
+
+
+                      cmd.ExecuteNonQuery();
+             
+                    
+      
+                    SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih", baglan);
+
+
+                    cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text);
+                    cmd2.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
+                    cmd2.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
+                    cmd2.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
+
+                    cmd2.ExecuteNonQuery();
+
+
+                    MessageBox.Show("Rezervasyon Başarılı");
+                    break;
+                }
             }
-
-            //   MessageBox.Show("Başarılı");
-            baglan.Close();*/
           
+            baglan.Close();
+
 
         }
 
