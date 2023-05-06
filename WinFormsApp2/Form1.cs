@@ -38,6 +38,7 @@ namespace WinFormsApp2
         bool isThere;
         private void btn_giris_Click(object sender, EventArgs e)
         {
+            
             string kullanıcı_adı = txt_ad.Text;
             string sıfre = txt_sifre.Text;
             
@@ -62,7 +63,7 @@ namespace WinFormsApp2
                 char i = 'i';
                 if (c == "" && d == "")
                 {
-                    MessageBox.Show("Lütfen Kullanıcı adı ve Şifre giriniz");
+                    MessageBox.Show("Lütfen Kullanıcı adı ve Şifre giriniz bb");
                     break;
                 }
                else if (c == a && d == "")
