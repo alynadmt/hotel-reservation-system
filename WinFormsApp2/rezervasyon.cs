@@ -20,7 +20,7 @@ namespace WinFormsApp2
             InitializeComponent();
             
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_5;Integrated Security=true");
         private void goster()
         {
             baglan.Open();

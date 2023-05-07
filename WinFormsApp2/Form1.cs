@@ -10,7 +10,7 @@ namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source =.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4; Integrated Security=TRUE ");
+        SqlConnection connection = new SqlConnection("Data Source =.; Initial Catalog=YaAl_Hotel_5; Integrated Security=TRUE ");
         public Form1()
         {
             InitializeComponent();
@@ -131,18 +131,23 @@ namespace WinFormsApp2
            connection.Close();
 
         }
-            
-           /* if(isThere)
-            {
-                MessageBox.Show("Basariyla giris yaptiniz", "Program");
-                form2.Show();  // form2 göster diyoruz
-                this.Hide();   // bu yani form1 gizle diyoruz
 
-            }
-            else
-            {
-                MessageBox.Show("Giris yapamadiniz ", "program");
-            }
-           */
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
+
+        /* if(isThere)
+         {
+             MessageBox.Show("Basariyla giris yaptiniz", "Program");
+             form2.Show();  // form2 göster diyoruz
+             this.Hide();   // bu yani form1 gizle diyoruz
+
+         }
+         else
+         {
+             MessageBox.Show("Giris yapamadiniz ", "program");
+         }
+        */
+    }
     }

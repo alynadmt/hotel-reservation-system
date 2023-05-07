@@ -56,5 +56,10 @@ namespace WinFormsApp2
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

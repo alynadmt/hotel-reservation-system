@@ -74,3 +74,10 @@ C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.İdare_İşlem_Ekran.resources
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.Entrance.resources
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.hakkımızdaform.resources
+C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.Entrance.resources
+C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.hakkımızdaform.resources
+C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.İdare_İşlem_Ekran.resources
+C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.Form2.resources
+C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.odalar.resources
+C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.UserControl1.resources
+C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.UserControl2.resources
