@@ -25,12 +25,13 @@ namespace WinFormsApp2
         private void button1_Click(object sender, EventArgs e)
         {
           this.Hide(userControl11);
+           
           this.Show(userControl22);
         }
 
         private void Hide(UserControl1 userControl11)
         {
-            throw new NotImplementedException();
+            
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)
@@ -79,6 +80,11 @@ namespace WinFormsApp2
         }
 
         private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void userControl22_Load(object sender, EventArgs e)
         {
 
         }

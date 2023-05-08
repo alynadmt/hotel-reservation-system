@@ -18,8 +18,8 @@ namespace WinFormsApp2
         public Entrance()
         {
             InitializeComponent();
-            label1.Parent = pictureBox1;
-            label1.BackColor = Color.Transparent;
+            label2.Parent = pictureBox1;
+            label2.BackColor = Color.Transparent;
             button1.Parent = pictureBox1;
             button1.BackColor= Color.Transparent;
             button1.Parent= pictureBox1;
@@ -60,6 +60,16 @@ namespace WinFormsApp2
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

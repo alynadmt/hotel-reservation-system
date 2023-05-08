@@ -18,9 +18,11 @@ namespace WinFormsApp2
         public rezervasyon()
         {
             InitializeComponent();
-            
+            label4.Parent = pictureBox1;
+            label4.BackColor = Color.Transparent;
+
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_5;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4;Integrated Security=true");
         private void goster()
         {
             baglan.Open();
@@ -65,54 +67,70 @@ namespace WinFormsApp2
         private void rezetbutton_Click(object sender, EventArgs e)
             
         { baglan.Open();
-             SqlCommand cmd3 = new SqlCommand("select DolulukId from Odalar where OdaId=@odano", baglan);
-            cmd3.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
-            SqlDataReader reader = cmd3.ExecuteReader();
-            while (reader.Read())
-            {
-                string a = reader["DolulukId"].ToString();
-                int a2 = (int)Convert.ToInt64(a);
-                int b = 1;
-                if (a2 == b)
-                {
-                    MessageBox.Show("Oda Bu Tarihler Arası Doludur");
-                    break;
-                }
-                else
-                {
-                    baglan.Close();
-                    baglan.Open();
-                        SqlCommand cmd = new SqlCommand("exec insertprocmüs @ad,@soyad,@telno,@tc,@dtarih,@mail", baglan);
+            /*  SqlCommand cmd3 = new SqlCommand("select DolulukId from Odalar where OdaId=@odano", baglan);
+             cmd3.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
+             SqlDataReader reader = cmd3.ExecuteReader();
+             while (reader.Read())
+             {
+                 string a = reader["DolulukId"].ToString();
+                 int a2 = (int)Convert.ToInt64(a);
+                 int b = 1;
+                 if (a2 == b)
+                 {
+                     MessageBox.Show("Oda Bu Tarihler Arası Doludur");
+                     break;
+                 }
+                 else
+                 {
+                     baglan.Close();
+                     baglan.Open();
+                         SqlCommand cmd = new SqlCommand("exec make_reservation_2 '3567890908',21,'2023-09-10','2023-09-15','Meryem','Gürbüz','05467090090','1992-11-12','fghjkjhgfgh'\r\n", baglan);
 
-                        cmd.Parameters.AddWithValue("@ad", ad2textbox.Text);
-                        cmd.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
-                        cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
-                        cmd.Parameters.AddWithValue("@tc", tc2textbox.Text);
-                        cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text));
-                        cmd.Parameters.AddWithValue("@mail", email2textbox.Text);
-
-
-
-                      cmd.ExecuteNonQuery();
-             
-                    
-      
-                    SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih", baglan);
+                         cmd.Parameters.AddWithValue("@ad", ad2textbox.Text);
+                         cmd.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
+                         cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
+                         cmd.Parameters.AddWithValue("@tc", tc2textbox.Text);
+                         cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text));
+                         cmd.Parameters.AddWithValue("@mail", email2textbox.Text);
 
 
-                    cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text);
-                    cmd2.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
-                    cmd2.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
-                    cmd2.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
 
-                    cmd2.ExecuteNonQuery();
+                       cmd.ExecuteNonQuery();
 
 
-                    MessageBox.Show("Rezervasyon Başarılı");
-                    break;
-                }
-            }
-          
+
+                     SqlCommand cmd2 = new SqlCommand("exec insertprocrez @tc,@odano,@gtarih,@ctarih", baglan);
+
+
+                     cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text);
+                     cmd2.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
+                     cmd2.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
+                     cmd2.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
+
+                     cmd2.ExecuteNonQuery();
+
+
+                     MessageBox.Show("Rezervasyon Başarılı");
+                     break;
+                 }
+             }*/
+            SqlCommand cmd = new SqlCommand("exec make_reservation_2 @tc,@odano,@gtarih,@ctarih,@ad,@soyad,@telno,@dtarih,@mail", baglan);
+            cmd.Parameters.AddWithValue("@ad", ad2textbox.Text);
+            cmd.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
+            cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
+            cmd.Parameters.AddWithValue("@tc", tc2textbox.Text);
+            cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text));
+            cmd.Parameters.AddWithValue("@mail", email2textbox.Text);
+            cmd.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
+            cmd.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
+            cmd.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
+
+            
+
+            cmd.ExecuteNonQuery();
+            fatura ftr = new fatura();
+            ftr.Show();  
+           
             baglan.Close();
 
 
@@ -135,6 +153,11 @@ namespace WinFormsApp2
         }
 
         private void ücret_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
         {
 
         }

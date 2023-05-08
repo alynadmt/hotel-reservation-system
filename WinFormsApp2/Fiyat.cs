@@ -25,5 +25,11 @@ namespace WinFormsApp2
 
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image =Image.FromFile("deniz.jpg");
+
+        }
     }
 }
