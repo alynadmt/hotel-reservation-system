@@ -36,19 +36,21 @@
             this.button2 = new System.Windows.Forms.Button();
             this.ımageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.kişisayısıcombobox = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.odastilcombobox = new System.Windows.Forms.ComboBox();
+            this.crarihitext = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.gtarihitext = new System.Windows.Forms.TextBox();
+            this.odabulbtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -126,12 +128,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.kişisayısıcombobox);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.odastilcombobox);
+            this.panel2.Controls.Add(this.crarihitext);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.gtarihitext);
             this.panel2.Location = new System.Drawing.Point(1, 366);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
@@ -139,20 +141,20 @@
             this.panel2.TabIndex = 6;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // comboBox1
+            // kişisayısıcombobox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.kişisayısıcombobox.FormattingEnabled = true;
+            this.kişisayısıcombobox.Items.AddRange(new object[] {
             "1 Kişilik",
             "2 Kişilik",
             "3 Kişilik",
             "4 Kişilik"});
-            this.comboBox1.Location = new System.Drawing.Point(580, 8);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(185, 33);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.Text = "Kişi Sayısı";
+            this.kişisayısıcombobox.Location = new System.Drawing.Point(580, 8);
+            this.kişisayısıcombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.kişisayısıcombobox.Name = "kişisayısıcombobox";
+            this.kişisayısıcombobox.Size = new System.Drawing.Size(185, 33);
+            this.kişisayısıcombobox.TabIndex = 8;
+            this.kişisayısıcombobox.Text = "Kişi Sayısı";
             // 
             // pictureBox3
             // 
@@ -165,29 +167,29 @@
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
-            // comboBox2
+            // odastilcombobox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.odastilcombobox.FormattingEnabled = true;
+            this.odastilcombobox.Items.AddRange(new object[] {
             "Suit Oda",
             "Kral Dairesi",
             "Junior Suit Oda",
             "Normal Oda "});
-            this.comboBox2.Location = new System.Drawing.Point(771, 6);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(192, 33);
-            this.comboBox2.TabIndex = 9;
-            this.comboBox2.Text = "Oda Stili";
+            this.odastilcombobox.Location = new System.Drawing.Point(771, 6);
+            this.odastilcombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.odastilcombobox.Name = "odastilcombobox";
+            this.odastilcombobox.Size = new System.Drawing.Size(192, 33);
+            this.odastilcombobox.TabIndex = 9;
+            this.odastilcombobox.Text = "Oda Stili";
             // 
-            // textBox2
+            // crarihitext
             // 
-            this.textBox2.Location = new System.Drawing.Point(341, 9);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(198, 31);
-            this.textBox2.TabIndex = 11;
-            this.textBox2.Text = "Çıkış Tarihi";
+            this.crarihitext.Location = new System.Drawing.Point(341, 9);
+            this.crarihitext.Margin = new System.Windows.Forms.Padding(2);
+            this.crarihitext.Name = "crarihitext";
+            this.crarihitext.Size = new System.Drawing.Size(198, 31);
+            this.crarihitext.TabIndex = 11;
+            this.crarihitext.Text = "Çıkış Tarihi";
             // 
             // pictureBox2
             // 
@@ -200,30 +202,31 @@
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
             // 
-            // textBox1
+            // gtarihitext
             // 
-            this.textBox1.Location = new System.Drawing.Point(101, 6);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(198, 31);
-            this.textBox1.TabIndex = 10;
-            this.textBox1.Text = "Giriş Tarihi";
+            this.gtarihitext.Location = new System.Drawing.Point(101, 6);
+            this.gtarihitext.Margin = new System.Windows.Forms.Padding(2);
+            this.gtarihitext.Name = "gtarihitext";
+            this.gtarihitext.Size = new System.Drawing.Size(198, 31);
+            this.gtarihitext.TabIndex = 10;
+            this.gtarihitext.Text = "Giriş Tarihi";
             // 
-            // button3
+            // odabulbtn
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkOrange;
-            this.button3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.ImageKey = "icons8-search-50.png";
-            this.button3.ImageList = this.ımageList1;
-            this.button3.Location = new System.Drawing.Point(961, 375);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 34);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Odamı Bul";
-            this.button3.UseVisualStyleBackColor = false;
+            this.odabulbtn.BackColor = System.Drawing.Color.DarkOrange;
+            this.odabulbtn.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.odabulbtn.ForeColor = System.Drawing.Color.White;
+            this.odabulbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.odabulbtn.ImageKey = "icons8-search-50.png";
+            this.odabulbtn.ImageList = this.ımageList1;
+            this.odabulbtn.Location = new System.Drawing.Point(961, 375);
+            this.odabulbtn.Margin = new System.Windows.Forms.Padding(2);
+            this.odabulbtn.Name = "odabulbtn";
+            this.odabulbtn.Size = new System.Drawing.Size(178, 34);
+            this.odabulbtn.TabIndex = 7;
+            this.odabulbtn.Text = "Odamı Bul";
+            this.odabulbtn.UseVisualStyleBackColor = false;
+            this.odabulbtn.Click += new System.EventHandler(this.odabulbtn_Click);
             // 
             // button4
             // 
@@ -250,14 +253,29 @@
             this.label2.Text = "YaAl_Hotel";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dataGridView1.ColumnHeadersHeight = 34;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 408);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 33;
+            this.dataGridView1.Size = new System.Drawing.Size(658, 353);
+            this.dataGridView1.TabIndex = 11;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
             // Entrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 641);
+            this.ClientSize = new System.Drawing.Size(1141, 749);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.odabulbtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -274,6 +292,7 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,14 +306,15 @@
         private Button button2;
         private ImageList ımageList1;
         private Panel panel2;
-        private Button button3;
+        private Button odabulbtn;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private TextBox crarihitext;
+        private TextBox gtarihitext;
+        private ComboBox odastilcombobox;
+        private ComboBox kişisayısıcombobox;
         private Button button4;
         private Label label2;
+        private DataGridView dataGridView1;
     }
 }

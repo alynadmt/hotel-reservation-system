@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
@@ -28,6 +29,25 @@ namespace WinFormsApp2
             button2.BackColor = Color.Transparent;
             button2.Parent = pictureBox1;
             button2.FlatAppearance.BorderColor = Color.LightSteelBlue;
+
+        }
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4;Integrated Security=true");
+        public void odalarıgetir()
+        {
+            baglan.Open();
+           
+            SqlCommand cmd = new SqlCommand("exec Oda_sorgu @odakişi,@odastil,@gtarihi,10,2023,09", baglan);
+            cmd.Parameters.AddWithValue("@odastil", Convert.ToString(odastilcombobox.Text));
+            cmd.Parameters.AddWithValue("@odakişi", Convert.ToString(kişisayısıcombobox.Text));
+            cmd.Parameters.AddWithValue("@gtarihi",Convert.ToDateTime(gtarihitext.Text));
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            dataGridView1.DataSource = dt;
+          
+    
+
+            baglan.Close();
 
         }
 
@@ -70,6 +90,16 @@ namespace WinFormsApp2
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void odabulbtn_Click(object sender, EventArgs e)
+        {
+            odalarıgetir();
         }
     }
 }
