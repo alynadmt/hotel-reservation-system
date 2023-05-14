@@ -56,7 +56,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(89, 236);
+            this.label1.Location = new System.Drawing.Point(79, 193);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 27);
@@ -65,7 +65,7 @@
             // 
             // ad2textbox
             // 
-            this.ad2textbox.Location = new System.Drawing.Point(252, 236);
+            this.ad2textbox.Location = new System.Drawing.Point(242, 193);
             this.ad2textbox.Margin = new System.Windows.Forms.Padding(2);
             this.ad2textbox.Name = "ad2textbox";
             this.ad2textbox.Size = new System.Drawing.Size(150, 31);
@@ -73,7 +73,7 @@
             // 
             // email2textbox
             // 
-            this.email2textbox.Location = new System.Drawing.Point(252, 516);
+            this.email2textbox.Location = new System.Drawing.Point(242, 473);
             this.email2textbox.Margin = new System.Windows.Forms.Padding(2);
             this.email2textbox.Name = "email2textbox";
             this.email2textbox.Size = new System.Drawing.Size(150, 31);
@@ -83,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(89, 522);
+            this.label2.Location = new System.Drawing.Point(79, 479);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 27);
@@ -94,7 +94,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(89, 462);
+            this.label3.Location = new System.Drawing.Point(79, 419);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 27);
@@ -103,7 +103,7 @@
             // 
             // telno2textbox
             // 
-            this.telno2textbox.Location = new System.Drawing.Point(252, 402);
+            this.telno2textbox.Location = new System.Drawing.Point(242, 359);
             this.telno2textbox.Margin = new System.Windows.Forms.Padding(2);
             this.telno2textbox.Name = "telno2textbox";
             this.telno2textbox.Size = new System.Drawing.Size(150, 31);
@@ -113,7 +113,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(89, 403);
+            this.label5.Location = new System.Drawing.Point(79, 360);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 27);
@@ -122,7 +122,7 @@
             // 
             // tc2textbox
             // 
-            this.tc2textbox.Location = new System.Drawing.Point(252, 345);
+            this.tc2textbox.Location = new System.Drawing.Point(242, 302);
             this.tc2textbox.Margin = new System.Windows.Forms.Padding(2);
             this.tc2textbox.Name = "tc2textbox";
             this.tc2textbox.Size = new System.Drawing.Size(150, 31);
@@ -132,7 +132,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(89, 345);
+            this.label6.Location = new System.Drawing.Point(79, 302);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 27);
@@ -141,7 +141,7 @@
             // 
             // soyad2textbox
             // 
-            this.soyad2textbox.Location = new System.Drawing.Point(252, 295);
+            this.soyad2textbox.Location = new System.Drawing.Point(242, 252);
             this.soyad2textbox.Margin = new System.Windows.Forms.Padding(2);
             this.soyad2textbox.Name = "soyad2textbox";
             this.soyad2textbox.Size = new System.Drawing.Size(150, 31);
@@ -151,7 +151,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(89, 295);
+            this.label7.Location = new System.Drawing.Point(79, 252);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(67, 27);
@@ -161,7 +161,7 @@
             // rezetbutton
             // 
             this.rezetbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.rezetbutton.Location = new System.Drawing.Point(691, 485);
+            this.rezetbutton.Location = new System.Drawing.Point(681, 442);
             this.rezetbutton.Margin = new System.Windows.Forms.Padding(2);
             this.rezetbutton.Name = "rezetbutton";
             this.rezetbutton.Size = new System.Drawing.Size(174, 62);
@@ -172,7 +172,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(252, 458);
+            this.dateTimePicker1.Location = new System.Drawing.Point(242, 415);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.MaxDate = new System.DateTime(2005, 12, 25, 23, 59, 59, 0);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -182,7 +182,7 @@
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(678, 317);
+            this.dateTimePicker3.Location = new System.Drawing.Point(668, 274);
             this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker3.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker3.Name = "dateTimePicker3";
@@ -194,7 +194,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(515, 321);
+            this.label8.Location = new System.Drawing.Point(505, 278);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(109, 27);
@@ -203,7 +203,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(678, 258);
+            this.dateTimePicker2.Location = new System.Drawing.Point(668, 215);
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker2.MaxDate = new System.DateTime(2023, 12, 31, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -215,7 +215,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(515, 261);
+            this.label9.Location = new System.Drawing.Point(505, 218);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(108, 27);
@@ -224,7 +224,7 @@
             // 
             // odanotextBox
             // 
-            this.odanotextBox.Location = new System.Drawing.Point(678, 368);
+            this.odanotextBox.Location = new System.Drawing.Point(668, 325);
             this.odanotextBox.Margin = new System.Windows.Forms.Padding(2);
             this.odanotextBox.Name = "odanotextBox";
             this.odanotextBox.Size = new System.Drawing.Size(150, 31);
@@ -234,7 +234,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(515, 371);
+            this.label10.Location = new System.Drawing.Point(505, 328);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(143, 27);
@@ -246,7 +246,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-4, -258);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1057, 450);
+            this.pictureBox1.Size = new System.Drawing.Size(1210, 419);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;

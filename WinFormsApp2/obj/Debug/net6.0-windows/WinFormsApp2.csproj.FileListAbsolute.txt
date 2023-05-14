@@ -86,3 +86,5 @@ C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.UserControl1.resources
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.UserControl2.resources
 C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.fatura.resources
+C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.Fotoğraf.resources
+C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.odadakimkalıyor.resources

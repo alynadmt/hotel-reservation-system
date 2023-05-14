@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Entrance));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,13 +40,13 @@
             this.kişisayısıcombobox = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.odastilcombobox = new System.Windows.Forms.ComboBox();
+            this.odabulbtn = new System.Windows.Forms.Button();
             this.crarihitext = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gtarihitext = new System.Windows.Forms.TextBox();
-            this.odabulbtn = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -55,6 +56,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 2);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -88,7 +90,7 @@
             this.button1.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.button1.Location = new System.Drawing.Point(781, 2);
+            this.button1.Location = new System.Drawing.Point(720, 2);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 36);
@@ -107,7 +109,7 @@
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button2.ImageKey = "icons8-phone-50 (1).png";
             this.button2.ImageList = this.ımageList1;
-            this.button2.Location = new System.Drawing.Point(902, 2);
+            this.button2.Location = new System.Drawing.Point(842, 2);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(202, 36);
@@ -127,17 +129,18 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.panel2.Controls.Add(this.kişisayısıcombobox);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.odastilcombobox);
+            this.panel2.Controls.Add(this.odabulbtn);
             this.panel2.Controls.Add(this.crarihitext);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.gtarihitext);
-            this.panel2.Location = new System.Drawing.Point(1, 366);
+            this.panel2.Location = new System.Drawing.Point(0, 353);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1138, 42);
+            this.panel2.Size = new System.Drawing.Size(1139, 66);
             this.panel2.TabIndex = 6;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -149,7 +152,7 @@
             "2 Kişilik",
             "3 Kişilik",
             "4 Kişilik"});
-            this.kişisayısıcombobox.Location = new System.Drawing.Point(580, 8);
+            this.kişisayısıcombobox.Location = new System.Drawing.Point(543, 14);
             this.kişisayısıcombobox.Margin = new System.Windows.Forms.Padding(2);
             this.kişisayısıcombobox.Name = "kişisayısıcombobox";
             this.kişisayısıcombobox.Size = new System.Drawing.Size(185, 33);
@@ -159,7 +162,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(62, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(30, 22);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(34, 34);
@@ -172,44 +175,13 @@
             this.odastilcombobox.FormattingEnabled = true;
             this.odastilcombobox.Items.AddRange(new object[] {
             "Suit Oda",
-            "Kral Dairesi",
-            "Junior Suit Oda",
             "Normal Oda "});
-            this.odastilcombobox.Location = new System.Drawing.Point(771, 6);
+            this.odastilcombobox.Location = new System.Drawing.Point(732, 14);
             this.odastilcombobox.Margin = new System.Windows.Forms.Padding(2);
             this.odastilcombobox.Name = "odastilcombobox";
             this.odastilcombobox.Size = new System.Drawing.Size(192, 33);
             this.odastilcombobox.TabIndex = 9;
             this.odastilcombobox.Text = "Oda Stili";
-            // 
-            // crarihitext
-            // 
-            this.crarihitext.Location = new System.Drawing.Point(341, 9);
-            this.crarihitext.Margin = new System.Windows.Forms.Padding(2);
-            this.crarihitext.Name = "crarihitext";
-            this.crarihitext.Size = new System.Drawing.Size(198, 31);
-            this.crarihitext.TabIndex = 11;
-            this.crarihitext.Text = "Çıkış Tarihi";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(545, 10);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 12;
-            this.pictureBox2.TabStop = false;
-            // 
-            // gtarihitext
-            // 
-            this.gtarihitext.Location = new System.Drawing.Point(101, 6);
-            this.gtarihitext.Margin = new System.Windows.Forms.Padding(2);
-            this.gtarihitext.Name = "gtarihitext";
-            this.gtarihitext.Size = new System.Drawing.Size(198, 31);
-            this.gtarihitext.TabIndex = 10;
-            this.gtarihitext.Text = "Giriş Tarihi";
             // 
             // odabulbtn
             // 
@@ -219,7 +191,7 @@
             this.odabulbtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.odabulbtn.ImageKey = "icons8-search-50.png";
             this.odabulbtn.ImageList = this.ımageList1;
-            this.odabulbtn.Location = new System.Drawing.Point(961, 375);
+            this.odabulbtn.Location = new System.Drawing.Point(938, 12);
             this.odabulbtn.Margin = new System.Windows.Forms.Padding(2);
             this.odabulbtn.Name = "odabulbtn";
             this.odabulbtn.Size = new System.Drawing.Size(178, 34);
@@ -228,18 +200,34 @@
             this.odabulbtn.UseVisualStyleBackColor = false;
             this.odabulbtn.Click += new System.EventHandler(this.odabulbtn_Click);
             // 
-            // button4
+            // crarihitext
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1076, 80);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(52, 34);
-            this.button4.TabIndex = 9;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.crarihitext.Location = new System.Drawing.Point(292, 17);
+            this.crarihitext.Margin = new System.Windows.Forms.Padding(2);
+            this.crarihitext.Name = "crarihitext";
+            this.crarihitext.Size = new System.Drawing.Size(198, 31);
+            this.crarihitext.TabIndex = 11;
+            this.crarihitext.Text = "Çıkış Tarihi";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(508, 16);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(30, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // gtarihitext
+            // 
+            this.gtarihitext.Location = new System.Drawing.Point(69, 17);
+            this.gtarihitext.Margin = new System.Windows.Forms.Padding(2);
+            this.gtarihitext.Name = "gtarihitext";
+            this.gtarihitext.Size = new System.Drawing.Size(198, 31);
+            this.gtarihitext.TabIndex = 10;
+            this.gtarihitext.Text = "Giriş Tarihi";
             // 
             // label2
             // 
@@ -255,27 +243,44 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dataGridView1.ColumnHeadersHeight = 34;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveBorder;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 408);
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 414);
             this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(658, 353);
+            this.dataGridView1.Size = new System.Drawing.Size(1160, 568);
             this.dataGridView1.TabIndex = 11;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(1036, 2);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(112, 34);
+            this.button3.TabIndex = 12;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Entrance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1141, 749);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.odabulbtn);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -313,8 +318,8 @@
         private TextBox gtarihitext;
         private ComboBox odastilcombobox;
         private ComboBox kişisayısıcombobox;
-        private Button button4;
         private Label label2;
         private DataGridView dataGridView1;
+        private Button button3;
     }
 }
