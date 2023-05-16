@@ -22,7 +22,7 @@ namespace WinFormsApp2
             label4.BackColor = Color.Transparent;*/
 
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_7;Integrated Security=true");
         private void goster()
         {
             baglan.Open();
@@ -124,7 +124,7 @@ namespace WinFormsApp2
                int sonuc = String.Compare(d, a);
                 if (sonuc ==-1)
                 {
-                    MessageBox.Show("Aynı kişi Giriş tarihi aynı olan bir ezervasyo yapamaz...");
+                    MessageBox.Show("Aynı kişi Giriş tarihi aynı olan bir rezervasyon yapamaz...");
                     break;
                 }
 
@@ -183,6 +183,14 @@ namespace WinFormsApp2
 
         private void label4_Click_1(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            iptal_ekranı slm = new iptal_ekranı();  
+            slm.Show();
+            this.Hide();
 
         }
     }
