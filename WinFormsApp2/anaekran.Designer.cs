@@ -34,11 +34,16 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
+            this.müşteriİşlemleriToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hangiOdadaKonakladıToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bilgileriGüncelleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.menuStrip2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,17 +55,19 @@
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.menuStrip2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(188, 841);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Candara Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button2.Location = new System.Drawing.Point(0, 140);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
@@ -86,7 +93,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Candara Light", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.button1.Location = new System.Drawing.Point(-9, 49);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
@@ -106,6 +113,51 @@
             this.panel2.Size = new System.Drawing.Size(321, 368);
             this.panel2.TabIndex = 1;
             // 
+            // menuStrip2
+            // 
+            this.menuStrip2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.menuStrip2.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip2.Font = new System.Drawing.Font("Segoe UI Symbol", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.menuStrip2.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.müşteriİşlemleriToolStripMenuItem});
+            this.menuStrip2.Location = new System.Drawing.Point(-19, 240);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(218, 38);
+            this.menuStrip2.TabIndex = 13;
+            this.menuStrip2.Text = "menuStrip2";
+            this.menuStrip2.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip2_ItemClicked_4);
+            // 
+            // müşteriİşlemleriToolStripMenuItem
+            // 
+            this.müşteriİşlemleriToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.müşteriİşlemleriToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.hangiOdadaKonakladıToolStripMenuItem,
+            this.bilgileriGüncelleToolStripMenuItem});
+            this.müşteriİşlemleriToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Symbol", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.müşteriİşlemleriToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.müşteriİşlemleriToolStripMenuItem.Name = "müşteriİşlemleriToolStripMenuItem";
+            this.müşteriİşlemleriToolStripMenuItem.Size = new System.Drawing.Size(210, 34);
+            this.müşteriİşlemleriToolStripMenuItem.Text = "Müşteri İşlemleri";
+            // 
+            // hangiOdadaKonakladıToolStripMenuItem
+            // 
+            this.hangiOdadaKonakladıToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.hangiOdadaKonakladıToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.hangiOdadaKonakladıToolStripMenuItem.Name = "hangiOdadaKonakladıToolStripMenuItem";
+            this.hangiOdadaKonakladıToolStripMenuItem.Size = new System.Drawing.Size(365, 38);
+            this.hangiOdadaKonakladıToolStripMenuItem.Text = "Hangi Odada Konakladı";
+            this.hangiOdadaKonakladıToolStripMenuItem.Click += new System.EventHandler(this.hangiOdadaKonakladıToolStripMenuItem_Click);
+            // 
+            // bilgileriGüncelleToolStripMenuItem
+            // 
+            this.bilgileriGüncelleToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.bilgileriGüncelleToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.bilgileriGüncelleToolStripMenuItem.Name = "bilgileriGüncelleToolStripMenuItem";
+            this.bilgileriGüncelleToolStripMenuItem.Size = new System.Drawing.Size(365, 38);
+            this.bilgileriGüncelleToolStripMenuItem.Text = "Bilgileri Güncelle";
+            this.bilgileriGüncelleToolStripMenuItem.Click += new System.EventHandler(this.bilgileriGüncelleToolStripMenuItem_Click_1);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label1);
@@ -116,16 +168,6 @@
             this.panel3.Size = new System.Drawing.Size(1167, 675);
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1248, 832);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -138,11 +180,22 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Sisteme Hoş Geldiniz";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1248, 832);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // anaekran
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1335, 675);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1376, 672);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -150,7 +203,10 @@
             this.Text = "anaekran";
             this.Load += new System.EventHandler(this.anaekran_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.menuStrip2.ResumeLayout(false);
+            this.menuStrip2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -168,5 +224,9 @@
         private Button button2;
         private Label label1;
         private PictureBox pictureBox1;
+        private MenuStrip menuStrip2;
+        private ToolStripMenuItem müşteriİşlemleriToolStripMenuItem;
+        private ToolStripMenuItem hangiOdadaKonakladıToolStripMenuItem;
+        private ToolStripMenuItem bilgileriGüncelleToolStripMenuItem;
     }
 }

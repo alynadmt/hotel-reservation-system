@@ -6,14 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Windows.Forms;
+
 namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source =.; Initial Catalog=YaAl_Hotel_5; Integrated Security=TRUE ");
+        SqlConnection connection = new SqlConnection("Data Source =.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_8; Integrated Security=TRUE ");
         public Form1()
         {
             InitializeComponent();
+            label3.Parent = pictureBox2;
+            label3.BackColor = Color.Transparent;
         }
        
         private void btn_giris_MouseHover(object sender, EventArgs e)
@@ -63,7 +67,7 @@ namespace WinFormsApp2
                 char i = 'i';
                 if (c == "" && d == "")
                 {
-                    MessageBox.Show("Lütfen Kullanıcı adı ve Şifre giriniz bb");
+                    MessageBox.Show("Lütfen Kullanıcı adı ve Şifre giriniz ");
                     break;
                 }
                else if (c == a && d == "")
@@ -81,13 +85,13 @@ namespace WinFormsApp2
                 {
                     if ((c == a && c != "") && ((d == b && d != "")) && (idare != i))
                     {
-                        MessageBox.Show("Basariyla giris yaptiniz", "Program");
+                      //  MessageBox.Show("Basariyla giris yaptiniz", "Program");
 
                         connection.Close();
                         connection.Open();
-                        SqlCommand kom = new SqlCommand("insert Login_Processes values(@Kullanıcı_adı,GETDATE())", connection);
-                        kom.Parameters.AddWithValue("@Kullanıcı_adı", txt_ad.Text);
-                        kom.ExecuteNonQuery();
+                       /* SqlCommand kom = new SqlCommand("insert Login_Processes values(@Kullanıcı_adı,GETDATE())", connection);
+                        kom.Parameters.AddWithValue("@Kullanıcı_adı", txt_ad.Text);*/
+                       // kom.ExecuteNonQuery();
 
                         form2.Show();  // form2 göster diyoruz
                         this.Hide();   // bu yani form1 gizle diyoruz
@@ -95,7 +99,7 @@ namespace WinFormsApp2
 
 
                     }
-                    else if ((c == a && c != "") && ((d == b && d != "")) && (idare == i))
+                  /*  else if ((c == a && c != "") && ((d == b && d != "")) && (idare == i))
                     {
                         MessageBox.Show("Basariyla giris yaptiniz", "Program");
 
@@ -104,18 +108,18 @@ namespace WinFormsApp2
                         break;
 
 
-                    }
+                    }*/
 
                  else   if ((c != a && c != "") && ((d == b && d != "")))
                     {
-                        MessageBox.Show("Kullanıcı adı veya şifrenizi kontrol ediniz...1", "Program");
+                        MessageBox.Show("Kullanıcı adı veya şifrenizi kontrol ediniz...", "Program");
 
                         break;
                       
                     }
                 else    if ((c == a && c != "") && ((d != b && d != "")))
                     {
-                        MessageBox.Show("Kullanıcı adı veya şifrenizi kontrol ediniz...2", "Program");
+                        MessageBox.Show("Kullanıcı adı veya şifrenizi kontrol ediniz...", "Program");
                         break;
                     }
                  /*   else if ((c != a && c != "") && ((d != b && d != "")))

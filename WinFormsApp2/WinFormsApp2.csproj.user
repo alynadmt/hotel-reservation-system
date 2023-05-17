@@ -28,7 +28,13 @@
     <Compile Update="hakkımızdaform.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="hangiodadakonakladı.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="iptal_ekranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="müşterigüncelleme.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="odadakimkalıyor.cs">

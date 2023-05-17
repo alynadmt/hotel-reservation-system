@@ -92,3 +92,6 @@ C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj
 C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.Fotoğraf.resources
 C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.odadakimkalıyor.resources
 C:\Users\90538\OneDrive\Desktop\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.iptal_ekranı.resources
+C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.iptal_ekranı.resources
+C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.hangiodadakonakladı.resources
+C:\Users\Aleyna\Documents\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.müşterigüncelleme.resources

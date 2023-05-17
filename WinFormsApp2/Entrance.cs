@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -27,19 +28,19 @@ namespace WinFormsApp2
             button1.BackColor= Color.Transparent;
             button1.Parent= pictureBox1;
             button1.FlatAppearance.BorderColor = Color.LightSteelBlue;
-
+         
             button2.Parent = pictureBox1;
             button2.BackColor = Color.Transparent;
             button2.Parent = pictureBox1;
             button2.FlatAppearance.BorderColor = Color.LightSteelBlue;
-            
-            button3.Parent= pictureBox1;
+
+            /*  button3.Parent= pictureBox1;
             button3.BackColor = Color.Transparent;
             button3.Parent= pictureBox1;
-            button3.FlatAppearance.BorderColor = Color.LightSteelBlue;
+            button3.FlatAppearance.BorderColor = Color.LightSteelBlue;*/
             datagridviewsetting(dataGridView1);
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_8;Integrated Security=true");
         public void odalarıgetir()
         {
             baglan.Open();
@@ -150,7 +151,9 @@ namespace WinFormsApp2
         {
 
         }
-
+        public static string a2;
+        public static string b2;
+        public static string c2;
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == dataGridView1.Columns["Fotoğraf"].Index)
@@ -166,21 +169,24 @@ namespace WinFormsApp2
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
-                {
+                { 
                     string a = reader["Stil"].ToString();
                     string b = reader["Yatak"].ToString();
-
-                    if (a == "Normal Oda" && b == "2 KişilikYatak")
+                    string c = reader["Kisi_Sayisi"].ToString() ;
+                    a2 = a;
+                    b2 = b;
+                    c2 = c;
+                    if (c == "2 Kişilik" || c == "3 Kişilik")
                     {
-                        Fotoğraf fm1 = new Fotoğraf();
-                        fm1.Show();
-                       
+                        Fotoğraf fm = new Fotoğraf();
+                        fm.Show();
+                        break;
                     }
                     else
                     {
-                        MessageBox.Show("Oda Görseli Bulunmamaktadır");
+                        MessageBox.Show("Odanın Görseli Bulunmamaktadır...");
                     }
-                    break;
+                  
                 }
                 baglan.Close();
                 

@@ -51,5 +51,83 @@ namespace WinFormsApp2
         {
 
         }
+
+        private void hnagiOdalardaKaldıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void menuStrip2_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void bilgileriGüncelleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            müşterigüncelleme kim = new müşterigüncelleme();
+            kim.TopLevel = false;
+            panel3.Controls.Add(kim);
+            kim.Show();
+            kim.Dock = DockStyle.Fill;
+            kim.BringToFront();
+        }
+
+        private void menuStrip2_ItemClicked_2(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void hangiOdadaKonakladıToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            hangiodadakonakladı kim = new hangiodadakonakladı();
+            kim.TopLevel = false;
+            panel3.Controls.Add(kim);
+            kim.Show();
+            kim.Dock = DockStyle.Fill;
+            kim.BringToFront();
+        }
+
+        private void menuStrip2_ItemClicked_3(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void menuStrip2_ItemClicked_4(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void bilgileriGüncelleToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            müşterigüncelleme kim = new müşterigüncelleme();
+            kim.TopLevel = false;
+            panel3.Controls.Add(kim);
+            kim.Show();
+            kim.Dock = DockStyle.Fill;
+            kim.BringToFront();
+        }
     }
 }
