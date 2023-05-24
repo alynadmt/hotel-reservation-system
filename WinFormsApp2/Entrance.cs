@@ -205,5 +205,10 @@ namespace WinFormsApp2
             fm.Show();
             this.Hide();
         }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("update rezervasyon set Oda_Id=12 where Giriş_Tarihi='2023-05-12 00:00:00.000'", baglan);
+        }
     }
 }

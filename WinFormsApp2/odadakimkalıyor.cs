@@ -27,7 +27,7 @@ namespace WinFormsApp2
             label4.BackColor = Color.Transparent;
             datagridviewsetting(dataGridView2);
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_8;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_10;Integrated Security=true");
         public void Müşgetir()
         {
             baglan.Open();

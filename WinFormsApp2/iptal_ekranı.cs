@@ -38,29 +38,30 @@ namespace WinFormsApp2
 
         }
         //SqlConnection baglan2 = new SqlConnection("Data Source=.; Initial Catalog= YaAl_Hotel_9;Integrated Security=true");
-        SqlConnection conn = new SqlConnection("Data Source=.\\; Initial Catalog=YaAl_Hotel_9;Integrated Security=true");
+        // SqlConnection conn = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog= YaAl_Hotel_10;Integrated Security=true");
+      //SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_10;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_10;Integrated Security=true");
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("update rezervasyon set Oda_Id=13 where Giriş_Tarihi=' 2023-05-12 00:00:00.000' ", conn);
+            baglan.Open();
+            SqlCommand cmd = new SqlCommand("delete from rezervasyon where Oda_Id=@Odano and Giriş_Tarihi = @giristarihi and Çıkış_Tarihi=@Çıkış_tarihi", baglan);
 
-            cmd.Parameters.AddWithValue("@Oda_no",Convert.ToInt64(Oda_txtbox.Text));
+            cmd.Parameters.AddWithValue("@Odano",Convert.ToInt64(Oda_txtbox.Text));
             string a = " 00:00:00.000";
             string b = giris_txt.Text;
-            string c = a + b;
+            string c = b+a;
 
             string k = " 00:00:00.000"; 
             string l = Cikis_txt.Text;
-            string m = k + l;
-            cmd.Parameters.AddWithValue("@giris_tarihi", giris_txt.Text);
-            cmd.Parameters.AddWithValue("@Çıkış_tarihi", Cikis_txt.Text);
+            string m = l+k;
+            cmd.Parameters.AddWithValue("@giristarihi",Convert.ToDateTime(c));
+            cmd.Parameters.AddWithValue("@Çıkış_tarihi",Convert.ToDateTime(m));
 
-          
+            cmd.ExecuteNonQuery();
            // baglan.Close();
             // cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
             MessageBox.Show("selammm");
-           conn.Close();
+           baglan.Close();
 
 
 
@@ -98,6 +99,12 @@ namespace WinFormsApp2
             sil.ExecuteNonQuery();
             baglan.Close();
           **/
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("update rezervasyon set Oda_Id=12 where Giriş_Tarihi='2023-05-12 00:00:00.000'", baglan);
 
         }
     }
