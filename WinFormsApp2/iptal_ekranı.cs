@@ -37,11 +37,14 @@ namespace WinFormsApp2
         {
 
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_7;Integrated Security=true");
+        //SqlConnection baglan2 = new SqlConnection("Data Source=.; Initial Catalog= YaAl_Hotel_9;Integrated Security=true");
+        SqlConnection conn = new SqlConnection("Data Source=.\\; Initial Catalog=YaAl_Hotel_9;Integrated Security=true");
         private void button1_Click(object sender, EventArgs e)
         {
-            baglan.Open();
-            SqlCommand cmd = new SqlCommand("delete from rezervasyon where Oda_Id=@Oda_no and Giriş_Tarihi = @giris_tarihi and  Çıkış_Tarihi = '2023-05-15 00:00:00.000'", baglan);
+            
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("update rezervasyon set Oda_Id=13 where Giriş_Tarihi=' 2023-05-12 00:00:00.000' ", conn);
+
             cmd.Parameters.AddWithValue("@Oda_no",Convert.ToInt64(Oda_txtbox.Text));
             string a = " 00:00:00.000";
             string b = giris_txt.Text;
@@ -50,11 +53,14 @@ namespace WinFormsApp2
             string k = " 00:00:00.000"; 
             string l = Cikis_txt.Text;
             string m = k + l;
-            cmd.Parameters.AddWithValue("@giris_tarihi", c);
-            cmd.Parameters.AddWithValue("@Çıkış_tarihi", m);
+            cmd.Parameters.AddWithValue("@giris_tarihi", giris_txt.Text);
+            cmd.Parameters.AddWithValue("@Çıkış_tarihi", Cikis_txt.Text);
+
+          
+           // baglan.Close();
             // cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
             MessageBox.Show("selammm");
-            baglan.Close();
+           conn.Close();
 
 
 
@@ -69,6 +75,29 @@ namespace WinFormsApp2
       //  SqlConnection baglanti();
         private void iptal_ekranı_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void Oda_txtbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+          /**  SqlConnection baglan = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_7;Integrated Security=true");
+            baglan.Open();
+            SqlCommand sil = new SqlCommand("delete from rezervasyon where Rez_Id=@Rez_Id ", baglan);
+
+            sil.Parameters.AddWithValue("Rez_Id", Rez_txtbox.Text);
+            
+            MessageBox.Show("veri silindi");
+
+
+            sil.ExecuteNonQuery();
+            baglan.Close();
+          **/
 
         }
     }

@@ -41,6 +41,8 @@
             this.cikisT_txt = new System.Windows.Forms.Label();
             this.Cikis_txt = new System.Windows.Forms.TextBox();
             this.iptalleri_göster = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Rez_txtbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -117,6 +119,7 @@
             this.Oda_txtbox.Name = "Oda_txtbox";
             this.Oda_txtbox.Size = new System.Drawing.Size(125, 27);
             this.Oda_txtbox.TabIndex = 8;
+            this.Oda_txtbox.TextChanged += new System.EventHandler(this.Oda_txtbox_TextChanged);
             // 
             // giris_txt
             // 
@@ -162,12 +165,31 @@
             this.iptalleri_göster.UseVisualStyleBackColor = true;
             this.iptalleri_göster.Click += new System.EventHandler(this.iptalleri_göster_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(587, 119);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 29);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Rez_txtbox
+            // 
+            this.Rez_txtbox.Location = new System.Drawing.Point(130, 126);
+            this.Rez_txtbox.Name = "Rez_txtbox";
+            this.Rez_txtbox.Size = new System.Drawing.Size(125, 27);
+            this.Rez_txtbox.TabIndex = 15;
+            // 
             // iptal_ekranı
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.ClientSize = new System.Drawing.Size(784, 403);
+            this.Controls.Add(this.Rez_txtbox);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.iptalleri_göster);
             this.Controls.Add(this.Cikis_txt);
             this.Controls.Add(this.cikisT_txt);
@@ -205,5 +227,7 @@
         private Label cikisT_txt;
         private TextBox Cikis_txt;
         private Button iptalleri_göster;
+        private Button button2;
+        private TextBox Rez_txtbox;
     }
 }
