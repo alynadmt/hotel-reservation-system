@@ -136,3 +136,4 @@ C:\Users\90538\OneDrive\Belgeler\GitHub\hotel-reservation-system\WinFormsApp2\ob
 C:\Users\90538\OneDrive\Belgeler\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.pdb
 C:\Users\90538\OneDrive\Belgeler\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.genruntimeconfig.cache
 C:\Users\90538\OneDrive\Belgeler\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\ref\WinFormsApp2.dll
+C:\Users\90538\OneDrive\Belgeler\GitHub\hotel-reservation-system\WinFormsApp2\obj\Debug\net6.0-windows\WinFormsApp2.mevcut_gelecek_rezSorgu.resources

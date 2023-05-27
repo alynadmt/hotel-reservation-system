@@ -18,6 +18,7 @@ namespace WinFormsApp2
             InitializeComponent();
         }
 
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -40,7 +41,7 @@ namespace WinFormsApp2
         //SqlConnection baglan2 = new SqlConnection("Data Source=.; Initial Catalog= YaAl_Hotel_9;Integrated Security=true");
         // SqlConnection conn = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog= YaAl_Hotel_10;Integrated Security=true");
       //SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_10;Integrated Security=true");
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_10;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_11;Integrated Security=true");
         private void button1_Click(object sender, EventArgs e)
         {
             baglan.Open();
@@ -68,10 +69,26 @@ namespace WinFormsApp2
 
 
         }
+        SqlConnection con = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_11;Integrated Security=true");
+        private void iptalleri_göster_MouseHover(object sender, EventArgs e)
+        {
+            iptalleri_göster.BackColor = Color.Teal;
+        }
+
+        private void iptalleri_göster_MouseLeave(object sender, EventArgs e)
+        {
+            iptalleri_göster.BackColor = Color.Turquoise;
+        }
 
         private void iptalleri_göster_Click(object sender, EventArgs e)
         {
-             
+            con.Open();
+            string select = "select * from iptal_rezerv";
+            SqlDataAdapter da = new SqlDataAdapter(select, con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
         }
       //  SqlConnection baglanti();
         private void iptal_ekranı_Load(object sender, EventArgs e)
@@ -106,6 +123,13 @@ namespace WinFormsApp2
         {
             SqlCommand cmd = new SqlCommand("update rezervasyon set Oda_Id=12 where Giriş_Tarihi='2023-05-12 00:00:00.000'", baglan);
 
+        }
+
+        private void geri_btn1_Click(object sender, EventArgs e)
+        {
+            anaekran nsn = new anaekran();
+            nsn.Show();
+            this.Hide();
         }
     }
 }

@@ -215,15 +215,18 @@ namespace WinFormsApp2
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            iptal_ekranı slm = new iptal_ekranı();  
-            slm.Show();
-            this.Hide();
+            
 
         }
 
         private void button1_Click_2(object sender, EventArgs e)
         {
             SqlCommand cmd = new SqlCommand("update rezervasyon set Oda_Id=12 where Giriş_Tarihi='2023-05-12 00:00:00.000'", baglan);
+        }
+
+        private void geri_btn3_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

@@ -129,5 +129,27 @@ namespace WinFormsApp2
             kim.Dock = DockStyle.Fill;
             kim.BringToFront();
         }
+
+        private void Rez_iptal_btn_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            iptal_ekranı rez = new iptal_ekranı();
+            rez.TopLevel = false;
+            panel3.Controls.Add(rez);
+            rez.Show();
+            rez.Dock = DockStyle.Fill;
+            rez.BringToFront();
+        }
+
+        private void Rez_sorgu_btn_Click(object sender, EventArgs e)
+        {
+            panel3.Controls.Clear();
+            mevcut_gelecek_rezSorgu rez = new mevcut_gelecek_rezSorgu();
+            rez.TopLevel = false;
+            panel3.Controls.Add(rez);
+            rez.Show();
+            rez.Dock = DockStyle.Fill;
+            rez.BringToFront();
+        }
     }
 }
