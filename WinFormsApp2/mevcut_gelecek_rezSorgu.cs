@@ -17,7 +17,7 @@ namespace WinFormsApp2
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_11;Integrated Security=true");
+        SqlConnection con = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12;Integrated Security=true");
         private void Gelecek_Rez_btn_MouseHover(object sender, EventArgs e)
         {
             Gelecek_Rez_btn.BackColor = Color.Teal;
@@ -68,6 +68,11 @@ namespace WinFormsApp2
         }
 
         private void geri_btn2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mevcut_gelecek_rezSorgu_Load(object sender, EventArgs e)
         {
 
         }

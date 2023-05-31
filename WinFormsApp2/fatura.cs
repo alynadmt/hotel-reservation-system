@@ -20,7 +20,7 @@ namespace WinFormsApp2
             label1.Parent = pictureBox1;
             label1.BackColor = Color.Transparent;
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_4;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12;Integrated Security=true");
 
         private void fatura_Load(object sender, EventArgs e)
         {

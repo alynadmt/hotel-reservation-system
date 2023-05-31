@@ -12,7 +12,7 @@ namespace WinFormsApp2
 {
     public partial class Form1 : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source =.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_8; Integrated Security=TRUE ");
+        SqlConnection connection = new SqlConnection("Data Source =.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12; Integrated Security=TRUE ");
         public Form1()
         {
             InitializeComponent();

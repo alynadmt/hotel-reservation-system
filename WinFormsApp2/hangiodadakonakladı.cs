@@ -22,7 +22,7 @@ namespace WinFormsApp2
             datagridviewsetting(dataGridView1);
             tümodalarıgetir();
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_11;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12;Integrated Security=true");
         void odalarıgetir()
         {
             baglan.Open();

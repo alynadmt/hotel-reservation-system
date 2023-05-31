@@ -18,7 +18,7 @@ namespace WinFormsApp2
             InitializeComponent();
             tümmüşterilerigetir();
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_8;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12;Integrated Security=true");
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 

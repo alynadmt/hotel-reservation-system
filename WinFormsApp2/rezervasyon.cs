@@ -23,7 +23,7 @@ namespace WinFormsApp2
 
         }
     //    SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_10;Integrated Security=true");
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_10;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12;Integrated Security=true");
 
         private void goster()
         {
@@ -69,7 +69,7 @@ namespace WinFormsApp2
         private void rezetbutton_Click(object sender, EventArgs e)
             
         { baglan.Open();
-            
+
             /*  SqlCommand cmd3 = new SqlCommand("select DolulukId from Odalar where OdaId=@odano", baglan);
              cmd3.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
              SqlDataReader reader = cmd3.ExecuteReader();
@@ -117,72 +117,30 @@ namespace WinFormsApp2
                      break;
                  }
              }*/
-            SqlCommand cmd2 = new SqlCommand("select Giriş_Tarihi from rezervasyon where Müc_Tc=@tc", baglan);
-            cmd2.Parameters.AddWithValue("@tc", tc2textbox.Text);
-            SqlDataReader reader = cmd2.ExecuteReader();
-            while (reader.Read())
-            {
-                MessageBox.Show("aaaaa");
-                string a = reader["Giriş_Tarihi"].ToString();
-                string d = Convert.ToString(dateTimePicker2.Text);
-               int sonuc = String.Compare(d, a);
-                if (sonuc ==-1)
-                {
-                    MessageBox.Show("aaaaa-1");
-                    MessageBox.Show("Aynı kişi Giriş tarihi aynı olan bir rezervasyon yapamaz...");
-                    break;
-                }
+            //SqlCommand cmd2 = new SqlCommand("select Giriş_Tarihi from rezervasyon where Müc_Tc=@tc", baglan)
+                  
 
-            else
-                {
-                   /* MessageBox.Show("aaaaa0");
-                    baglan.Close();
-                    baglan.Open();
-                      SqlCommand cmd = new SqlCommand("exec make_reservation_2 @tc,@odano,@gtarih,@ctarih,@ad,@soyad,@telno,@dtarih,@mail", baglan);
-                      cmd.Parameters.AddWithValue("@ad", ad2textbox.Text);
-                      cmd.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
-                      cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
-                      cmd.Parameters.AddWithValue("@tc", tc2textbox.Text);
-                      cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text));
-                      cmd.Parameters.AddWithValue("@mail", email2textbox.Text);
-                      cmd.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
-                      cmd.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
-                      cmd.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
+                   
+                        SqlCommand cmd4 = new SqlCommand("exec make_reservation_2 @tc,@odano,@gtarih,@ctarih,@ad,@soyad,@telno,@dtarih,@mail", baglan);
+                        cmd4.Parameters.AddWithValue("@ad", ad2textbox.Text);
+                        cmd4.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
+                        cmd4.Parameters.AddWithValue("@telno", telno2textbox.Text);
+                        cmd4.Parameters.AddWithValue("@tc", tc2textbox.Text);
+                        cmd4.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text));
+                        cmd4.Parameters.AddWithValue("@mail", email2textbox.Text);
+                        cmd4.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
+                        cmd4.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
+                        cmd4.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
 
 
 
-                      cmd.ExecuteNonQuery();
-                      MessageBox.Show("rezerveee1");
-                      fatura ftr = new fatura();
-                    ftr.Show();
-                    break;*/
-                }
-            }
-            MessageBox.Show("aaaaa9");
-            baglan.Close();
-            baglan.Open();
-            SqlCommand cmd = new SqlCommand("exec make_reservation_2 @tc,@odano,@gtarih,@ctarih,@ad,@soyad,@telno,@dtarih,@mail", baglan);
-            cmd.Parameters.AddWithValue("@ad", ad2textbox.Text);
-            cmd.Parameters.AddWithValue("@soyad", soyad2textbox.Text);
-            cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
-            cmd.Parameters.AddWithValue("@tc", tc2textbox.Text);
-            cmd.Parameters.AddWithValue("@dtarih", Convert.ToDateTime(dateTimePicker1.Text));
-            cmd.Parameters.AddWithValue("@mail", email2textbox.Text);
-            cmd.Parameters.AddWithValue("@odano", Convert.ToInt64(odanotextBox.Text));
-            cmd.Parameters.AddWithValue("@gtarih", Convert.ToDateTime(dateTimePicker2.Text));
-            cmd.Parameters.AddWithValue("@ctarih", Convert.ToDateTime(dateTimePicker3.Text));
-
-
-
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("rezerveee1");
-            fatura ftr = new fatura();
-            ftr.Show();
-            
-            MessageBox.Show("aaaaa2");
-
-
-            baglan.Close();
+                        cmd4.ExecuteNonQuery();
+                        MessageBox.Show("rezerveee1");
+                        fatura ftr = new fatura();
+                        ftr.Show();
+                     
+      
+           baglan.Close();
 
 
         }

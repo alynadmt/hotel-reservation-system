@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\90538\\.nuget\\packages\\": {}
+    "C:\\Users\\Aleyna\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\90538\\OneDrive\\Belgeler\\GitHub\\hotel-reservation-system\\WinFormsApp2\\WinFormsApp2.csproj",
+      "projectUniqueName": "C:\\Users\\Aleyna\\Documents\\GitHub\\hotel-reservation-system\\WinFormsApp2\\WinFormsApp2.csproj",
       "projectName": "WinFormsApp2",
-      "projectPath": "C:\\Users\\90538\\OneDrive\\Belgeler\\GitHub\\hotel-reservation-system\\WinFormsApp2\\WinFormsApp2.csproj",
-      "packagesPath": "C:\\Users\\90538\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\90538\\OneDrive\\Belgeler\\GitHub\\hotel-reservation-system\\WinFormsApp2\\obj\\",
+      "projectPath": "C:\\Users\\Aleyna\\Documents\\GitHub\\hotel-reservation-system\\WinFormsApp2\\WinFormsApp2.csproj",
+      "packagesPath": "C:\\Users\\Aleyna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Aleyna\\Documents\\GitHub\\hotel-reservation-system\\WinFormsApp2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\90538\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Aleyna\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -532,7 +532,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
   }

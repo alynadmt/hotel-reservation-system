@@ -39,12 +39,14 @@ namespace WinFormsApp2
             button3.Parent= pictureBox1;
             button3.FlatAppearance.BorderColor = Color.LightSteelBlue;*/
             datagridviewsetting(dataGridView1);
+          
         }
-        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_8;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12;Integrated Security=true");
         public void odalarıgetir()
         {
             baglan.Open();
-           
+            //dataGridView1.Rows.Clear();
+          dataGridView1.Columns.Clear();
             SqlCommand cmd = new SqlCommand("exec Oda_Sorgu_2 @odakişi,@odastil,@gtarihi,@ctarihi\r\n", baglan);
             cmd.Parameters.AddWithValue("@odastil", Convert.ToString(odastilcombobox.Text));
             cmd.Parameters.AddWithValue("@odakişi", Convert.ToString(kişisayısıcombobox.Text));
@@ -56,8 +58,9 @@ namespace WinFormsApp2
             dataGridView1.DataSource = dt;
             button();
 
-
+            
             baglan.Close();
+          
 
         }
         public void datagridviewsetting(DataGridView datagridview)

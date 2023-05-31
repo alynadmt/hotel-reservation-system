@@ -41,7 +41,7 @@ namespace WinFormsApp2
         //SqlConnection baglan2 = new SqlConnection("Data Source=.; Initial Catalog= YaAl_Hotel_9;Integrated Security=true");
         // SqlConnection conn = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog= YaAl_Hotel_10;Integrated Security=true");
       //SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_10;Integrated Security=true");
-        SqlConnection baglan = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_11;Integrated Security=true");
+        SqlConnection baglan = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12;Integrated Security=true");
         private void button1_Click(object sender, EventArgs e)
         {
             baglan.Open();
@@ -61,7 +61,7 @@ namespace WinFormsApp2
             cmd.ExecuteNonQuery();
            // baglan.Close();
             // cmd.Parameters.AddWithValue("@telno", telno2textbox.Text);
-            MessageBox.Show("selammm");
+            MessageBox.Show("Rezervasyon İptali Başarı ile tamamlanmıştır.");
            baglan.Close();
 
 
@@ -69,7 +69,7 @@ namespace WinFormsApp2
 
 
         }
-        SqlConnection con = new SqlConnection("Data Source=.; Initial Catalog=YaAl_Hotel_11;Integrated Security=true");
+        SqlConnection con = new SqlConnection("Data Source=.\\MSSQLSERVER01; Initial Catalog=YaAl_Hotel_12;Integrated Security=true");
         private void iptalleri_göster_MouseHover(object sender, EventArgs e)
         {
             iptalleri_göster.BackColor = Color.Teal;
@@ -83,7 +83,7 @@ namespace WinFormsApp2
         private void iptalleri_göster_Click(object sender, EventArgs e)
         {
             con.Open();
-            string select = "select * from iptal_rezerv";
+            string select = "select * from iptal_rezerv order by Rez_Id asc";
             SqlDataAdapter da = new SqlDataAdapter(select, con);
             DataTable dt = new DataTable();
             da.Fill(dt);
